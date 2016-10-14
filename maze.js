@@ -1,6 +1,6 @@
 window.onload = function() {
 firstBoundary();
-cheater();
+//cheater();
     var start = document.getElementById("start");
     start.addEventListener("click" , function(){
         var status = document.getElementById("status");
@@ -79,12 +79,12 @@ function end(){
     });
 }
 
-function cheater(){
+/*function cheater(){
     var test=document.getElementById("end");
     test.paddingRight.addEventListener("mouseover", function(){
             redBoundary();
     });
-}
+}*/
 
     
     
