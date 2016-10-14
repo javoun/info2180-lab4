@@ -5,6 +5,8 @@ firstBoundary();
         for (var i = 0; i < allB.length; i++) {
         allB[i].setAttribute("class", "boundary")
         }
+    
+end();
 
 };
 
@@ -54,9 +56,21 @@ function redBoundary() {
     for (var i = 0; i < allB.length; i++) {
     allB[i].setAttribute("class", "boundary youlose");
     }
+
 }
 
+function end(){
+    
+    var status = document.getElementById("status");
 
+    var end = document.getElementById("end");
+    end.addEventListener("mouseover" , function(){
+        if (status != "1"){
+            
+            status.innerHTML="You Won!";
+        }
+    });
+}   
 
 
     
