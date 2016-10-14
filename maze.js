@@ -1,10 +1,16 @@
 window.onload = function() {
 firstBoundary();
+
+    var start = document.getElementById("start");
+    start.addEventListener("click" , function(){
+        var status = document.getElementById("status");
+        status.innerHTML="Move your mouse over the \"S\" to begin.";
         
         var allB = document.getElementsByClassName("boundary");
         for (var i = 0; i < allB.length; i++) {
         allB[i].setAttribute("class", "boundary")
         }
+    }); 
     
 end();
 
@@ -12,11 +18,11 @@ end();
 
 function firstBoundary() {
 
-var wall = document.getElementById("boundary1");
+var firstB = document.getElementById("boundary1");
 
 var allB = document.getElementsByClassName("boundary");
 
-wall.addEventListener("mouseover", function(){
+firstB.addEventListener("mouseover", function(){
    // topleft.style.borderBottomColor= "red";
    // topleft.style.borderRightColor= "red";
 redBoundary();
@@ -56,7 +62,8 @@ function redBoundary() {
     for (var i = 0; i < allB.length; i++) {
     allB[i].setAttribute("class", "boundary youlose");
     }
-
+    var status = document.getElementById("status");
+    status.innerHTML="You Lose!";
 }
 
 function end(){
@@ -71,10 +78,3 @@ function end(){
         }
     });
 }   
-
-
-    
-    
-
-
-
